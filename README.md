@@ -7,7 +7,8 @@
 | `/usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on / off` | enable / disable stealthmode |
 | `systemsetup -setremotelogin on / off` | enable / disable ssh |
 | `spctl --master-enable / disable` | enable / disable gatekeeper |
-| `dscl . passwd /Users/admin` | change user password |
+| `dscl . passwd /Users/admin` | change user (admin) password |
+| `uname -a` | display kernel version |
 | `system_profiler` | display any information |
 | `system_profiler SPHardwareDataType` | display any information about hardware |
 | `system_profiler SPSoftwareDataType ` | display any information about software |
