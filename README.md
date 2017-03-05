@@ -41,3 +41,4 @@ reboot
 | `sudo nano /Library/Managed\ Installs/manifests/SelfServeManifest` | current Installs |
 | `sudo managedsoftwareupdate` | search software and updates via munki |
 | `sudo managedsoftwareupdate --installonly` | install available software and updates via munki |
+| `sudo managedsoftwareupdate -vvv` | get more verbose output |
