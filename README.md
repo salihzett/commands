@@ -9,6 +9,8 @@
 | `spctl --master-enable / disable` | enable / disable gatekeeper |
 | `dscl . passwd /Users/admin` | change user password |
 | `system_profiler` | display any information |
+| `system_profiler SPHardwareDataType` | display any information about hardware |
+| `system_profiler SPSoftwareDataType ` | display any information about software |
 | `find / -name "\*filename\*" -print` | search and display file |
 | `whoami` | display short username  |
 | `id -F` | display full username |
@@ -22,9 +24,13 @@
 | `softwareupdate -l` | search apple software update |
 | `softwareupdate -i -a` | install available updates |
 
-
-
-
+##### create new admin without admin privilegs
+Hold `⌘`+`S` on startup, then
+```
+/sbin/mount -uw /
+rm /var/db/.applesetupdone
+reboot
+```
 
 #### for munki 
 | Command | Description |
