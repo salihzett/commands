@@ -24,7 +24,7 @@
 | `tmutil disablelocal` | disable local timemachine backups |
 | `softwareupdate -l` | search apple software update |
 | `softwareupdate -i -a` | install available updates |
-| `ssh-keygen -t rsa -b 4096 -f ~..ssh/id_rsa` | keygen create id_rsa |
+| `ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa` | keygen create id_rsa |
 
 
 ##### create new admin without admin privilegs
