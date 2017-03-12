@@ -35,6 +35,15 @@ rm /var/db/.applesetupdone
 reboot
 ```
 
+##### config remote host with id_rsa.pub
+```
+scp ~/.ssh/id_rsa.pub admin@<remote_host>:
+mkdir ~/.ssh
+cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+rm ~/id_rsa.pub
+chmod 600 ~/.ssh/authorized_keys
+```
+
 #### for munki 
 | Command | Description |
 | --- | --- |
