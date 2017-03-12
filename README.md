@@ -37,11 +37,17 @@ reboot
 
 ##### config remote host with id_rsa.pub
 ```
-scp ~/.ssh/id_rsa.pub admin@<remote_host>:
+scp ~/.ssh/id_rsa.pub <user>@<remote_host>:
 mkdir ~/.ssh
 cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 rm ~/id_rsa.pub
 chmod 600 ~/.ssh/authorized_keys
+```
+
+##### install pkg on remote host
+```
+scp /PATHTO/<file>.pkg <user>@<remote_host>:/tmp/
+sudo installer -pkg /tmp/<file>.pkg -target /
 ```
 
 #### for munki 
