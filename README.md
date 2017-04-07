@@ -8,8 +8,11 @@
 | `systemsetup -setremotelogin on / off` | enable / disable ssh |
 | `spctl --master-enable / disable` | enable / disable gatekeeper |
 | `dscl . passwd /Users/admin` | change user (admin) password |
+| `dscl . list /Users | grep -v '_'` | show user accounts only |
 | `uname -a` | display kernel version |
+| `sysctl hw.model | awk '{ print $2 }'` | display model |
 | `system_profiler` | display any information |
+| `sysctl hw.model | awk '{ print $2 }'` | display model |
 | `system_profiler SPHardwareDataType` | display any information about hardware |
 | `system_profiler SPSoftwareDataType ` | display any information about software |
 | `find / -name "\*filename\*" -print` | search and display file |
@@ -59,3 +62,17 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `sudo managedsoftwareupdate` | search software and updates via munki |
 | `sudo managedsoftwareupdate --installonly` | install available software and updates via munki |
 | `sudo managedsoftwareupdate -vvv` | get more verbose output |
+| `munki://category-all.html` | overview |
+| `munki://updates.htm` | updates |
+| `munki://detail-Spotify` | direct to app (detailname) |
+
+#### for unix 
+| Command | Description |
+| --- | --- |
+| `/etc/motd` | welcome screen for ssh connection |
+| `/etc/issue` | welcome screen for screen |
+| `/etc/gettytab` | banner |
+| `smbstatus` | current connections to smb server |
+
+
+
