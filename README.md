@@ -28,6 +28,8 @@
 | `softwareupdate -l` | search apple software update |
 | `softwareupdate -i -a` | install available updates |
 | `ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa` | keygen create id_rsa |
+| `sudo mdutil -E /` |  reindex volume on the mac |
+
 
 
 ##### create new admin without admin privilegs
