@@ -76,5 +76,11 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `/etc/gettytab` | banner |
 | `smbstatus` | current connections to smb server |
 
+#### for asterisk 
+| Command | Description |
+| --- | --- |
+| `sudo asterisk -vvvvvrx 'core show channels' | grep call  ` | show active calls |
+| `sudo asterisk -vvvvvrx 'core show channels verbose'  ` | show active channels |
+
 
 
