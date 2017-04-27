@@ -79,7 +79,7 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 #### for asterisk 
 | Command | Description |
 | --- | --- |
-| `sudo asterisk -vvvvvrx 'core show channels' | grep call  ` | show active calls |
+| `sudo asterisk -vvvvvrx 'core show channels' \| grep call ` | show active calls |
 | `sudo asterisk -vvvvvrx 'core show channels verbose'  ` | show active channels |
 
 
