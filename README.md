@@ -8,11 +8,10 @@
 | `systemsetup -setremotelogin on / off` | enable / disable ssh |
 | `spctl --master-enable / disable` | enable / disable gatekeeper |
 | `dscl . passwd /Users/admin` | change user (admin) password |
-| `dscl . list /Users | grep -v '_'` | show user accounts only |
+| `dscl . list /Users \| grep -v '_'`  | show user accounts only |
 | `uname -a` | display kernel version |
-| `sysctl hw.model | awk '{ print $2 }'` | display model |
 | `system_profiler` | display any information |
-| `sysctl hw.model | awk '{ print $2 }'` | display model |
+| `sysctl hw.model \| awk '{ print $2 }'` | display model |
 | `system_profiler SPHardwareDataType` | display any information about hardware |
 | `system_profiler SPSoftwareDataType ` | display any information about software |
 | `find / -name "\*filename\*" -print` | search and display file |
