@@ -86,6 +86,8 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `docker start Container-ID` |  |
 | `docker stop Container-ID` |  |
 | `docker attach Container-ID` |  |
+| `docker inspect Container-ID` | render all results in a JSON array |
+| `docker inspect Container-ID \| grep -w "IPAddress" \| awk '{ print $2 }' \| head -n 1 \| cut -d "," -f1` | show only ip |
 
 #### for asterisk 
 | Command | Description |
