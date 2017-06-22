@@ -79,7 +79,7 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | --- | --- |
 | `docker ps -a` | |
 | `docker stop $(docker ps -a -q)` |  |
-| `docker rm $(docker ps -a -q` |  |
+| `docker rm $(docker ps -a -q)` |  |
 | `docker images -a` |  |
 | `docker rmi $(docker images -a -q)` |  |
 | `docker build . -t foo` |  |
