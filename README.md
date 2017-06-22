@@ -30,7 +30,6 @@
 | `sudo mdutil -E /` |  reindex volume on the mac |
 
 
-
 ##### create new admin without admin privilegs
 Hold `⌘`+`S` on startup, then
 ```
@@ -75,11 +74,21 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `/etc/gettytab` | banner |
 | `smbstatus` | current connections to smb server |
 
+#### for docker 
+| Command | Description |
+| --- | --- |
+| `docker ps -a` | |
+| `docker stop $(docker ps -a -q)` |  |
+| `docker rm $(docker ps -a -q` |  |
+| `docker images -a` |  |
+| `docker rmi $(docker images -a -q)` |  |
+| `docker build . -t foo` |  |
+| `docker start Container-ID` |  |
+| `docker stop Container-ID` |  |
+| `docker attach Container-ID` |  |
+
 #### for asterisk 
 | Command | Description |
 | --- | --- |
 | `sudo asterisk -vvvvvrx 'core show channels' \| grep call ` | show active calls |
 | `sudo asterisk -vvvvvrx 'core show channels verbose'  ` | show active channels |
-
-
-
