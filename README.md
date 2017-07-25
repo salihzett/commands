@@ -62,8 +62,8 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `sudo managedsoftwareupdate` | search software and updates via munki |
 | `sudo managedsoftwareupdate --installonly` | install available software and updates via munki |
 | `sudo managedsoftwareupdate -vvv` | get more verbose output |
-| `munki://category-all.html` | overview |
-| `munki://updates.htm` | updates |
+| `munki://category-all` | overview |
+| `munki://updates` | updates |
 | `munki://detail-Spotify` | direct to app (detailname) |
 
 #### for unix 
