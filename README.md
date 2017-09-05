@@ -77,15 +77,16 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 #### for docker 
 | Command | Description |
 | --- | --- |
-| `docker ps -a` | |
+| `docker ps -a` | show all container |
 | `docker stop $(docker ps -a -q)` |  |
-| `docker rm $(docker ps -a -q)` |  |
-| `docker images -a` |  |
-| `docker rmi $(docker images -a -q)` |  |
-| `docker build . -t foo` |  |
-| `docker start Container-ID` |  |
-| `docker stop Container-ID` |  |
-| `docker attach Container-ID` |  |
+| `docker rm $(docker ps -a -q)` | delete all container (before stop them) |
+| `docker images -a` | show all images |
+| `docker rmi $(docker images -a -q)` | delete all images |
+| `docker build . -t foo` | build image with dockerfile |
+| `docker run ` | run image and create container |
+| `docker start Container-ID` | start container |
+| `docker stop Container-ID` | stop container |
+| `docker attach Container-ID` | attach container |
 | `docker inspect Container-ID` | render all results in a JSON array |
 | `docker inspect Container-ID \| grep -w "IPAddress" \| awk '{ print $2 }' \| head -n 1 \| cut -d "," -f1` | show only ip |
 
