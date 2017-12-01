@@ -29,6 +29,7 @@
 | `softwareupdate -i -a` | install available updates |
 | `ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa` | keygen create id_rsa |
 | `sudo mdutil -E /` |  reindex volume on the mac |
+| `dns-sd -B _ssh._tcp .` | check macs in the network |
 
 
 ##### create new admin without admin privilegs
