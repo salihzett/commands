@@ -36,7 +36,7 @@
 Hold `⌘`+`S` on startup, then
 ```
 /sbin/mount -uw /
-rm /var/db/.applesetupdone
+rm /var/db/.AppleSetupdone
 reboot
 ```
 
