@@ -75,6 +75,7 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `/etc/issue` | welcome screen for screen |
 | `/etc/gettytab` | banner |
 | `smbstatus` | current connections to smb server |
+| `/var/log/samba/log.<clientname>` | logs for clients |
 
 #### for docker 
 | Command | Description |
