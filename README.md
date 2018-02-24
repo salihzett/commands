@@ -60,6 +60,7 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | --- | --- |
 | `sudo defaults write /Library/Preferences/ManagedInstalls InstallAppleSoftwareUpdates -bool True / False` | enable / disable Apple Updates via Munki |
 | `sudo /usr/bin/defaults write /Library/Preferences/ManagedInstalls DaysBetweenNotifications -int -1` | notification interval |
+| `sudo /usr/bin/defaults write /Library/Preferences/ManagedInstalls ClientResourcesFilename -string "foo.zip"` | custom ClientResources |
 | `sudo nano /Library/Managed\ Installs/manifests/SelfServeManifest` | current Installs |
 | `sudo managedsoftwareupdate` | search software and updates via munki |
 | `sudo managedsoftwareupdate --installonly` | install available software and updates via munki |
