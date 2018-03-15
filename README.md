@@ -9,6 +9,7 @@
 | `spctl --master-enable / disable` | enable / disable gatekeeper |
 | `dscl . passwd /Users/admin` | change user (admin) password |
 | `dscl . list /Users \| grep -v '_'`  | show user accounts only |
+| `ioreg -l | awk -F\" '/board-id/ { print $4 }'`  | show board id |
 | `uname -a` | display kernel version |
 | `system_profiler` | display any information |
 | `sysctl hw.model \| awk '{ print $2 }'` | display model |
