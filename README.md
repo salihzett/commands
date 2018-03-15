@@ -23,6 +23,7 @@
 | `/usr/bin/profiles -D` | delete profiles on macOS |
 | `echo y \| sudo /usr/bin/profiles -D` | delete profiles on macOS with yes |
 | `du -hd 1 /` | display disk usage |
+| `df -h` | show space from mounted disk |
 | `tmutil disablelocal` | disable local timemachine backups |
 | `fdesetup sync` | synchronize existing FileVault user information |
 | `softwareupdate -l` | search apple software update |
