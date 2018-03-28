@@ -26,6 +26,7 @@
 | `du -hd 1 /` | display disk usage |
 | `df -h` | show space from mounted disk |
 | `tmutil disablelocal` | disable local timemachine backups |
+| `ln -s /path/to/folder` | create alias |
 | `fdesetup sync` | synchronize existing FileVault user information |
 | `softwareupdate -l` | search apple software update |
 | `softwareupdate -i -a` | install available updates |
