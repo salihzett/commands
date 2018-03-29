@@ -15,7 +15,7 @@
 | `sysctl hw.model \| awk '{ print $2 }'` | display model |
 | `system_profiler SPHardwareDataType` | display any information about hardware |
 | `system_profiler SPSoftwareDataType ` | display any information about software |
-| `system_profiler SPPowerDataType | grep "Cycle Count" | awk '{print $3}' ` | display battery cycle count |
+| `system_profiler SPPowerDataType \| grep "Cycle Count" \| awk '{print $3}' ` | display battery cycle count |
 | `find / -name "\*filename\*" -print` | search and display file |
 | `whoami` | display short username  |
 | `id -F` | display full username |
