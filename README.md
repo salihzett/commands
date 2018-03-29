@@ -9,12 +9,13 @@
 | `spctl --master-enable / disable` | enable / disable gatekeeper |
 | `dscl . passwd /Users/admin` | change user (admin) password |
 | `dscl . list /Users \| grep -v '_'`  | show user accounts only |
-| `ioreg -l | awk -F\" '/board-id/ { print $4 }'`  | show board id |
+| `ioreg -l \| awk -F\" '/board-id/ { print $4 }'`  | show board id |
 | `uname -a` | display kernel version |
 | `system_profiler` | display any information |
 | `sysctl hw.model \| awk '{ print $2 }'` | display model |
 | `system_profiler SPHardwareDataType` | display any information about hardware |
 | `system_profiler SPSoftwareDataType ` | display any information about software |
+| `system_profiler SPPowerDataType | grep "Cycle Count" | awk '{print $3}' ` | display battery cycle count |
 | `find / -name "\*filename\*" -print` | search and display file |
 | `whoami` | display short username  |
 | `id -F` | display full username |
@@ -65,6 +66,7 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `sudo /usr/bin/defaults write /Library/Preferences/ManagedInstalls DaysBetweenNotifications -int -1` | notification interval |
 | `sudo /usr/bin/defaults write /Library/Preferences/ManagedInstalls ClientResourcesFilename -string "foo.zip"` | custom ClientResources |
 | `sudo nano /Library/Managed\ Installs/manifests/SelfServeManifest` | current Installs |
+| `sudo defaults read /Library/Preferences/ManagedInstalls.plist` | current munki configs |
 | `sudo managedsoftwareupdate` | search software and updates via munki |
 | `sudo managedsoftwareupdate --installonly` | install available software and updates via munki |
 | `sudo managedsoftwareupdate -vvv` | get more verbose output |
