@@ -36,7 +36,9 @@
 | `dns-sd -B _ssh._tcp .` | check macs in the network |
 | `pwpolicy -a admin -u user -setpolicy "newPasswordRequired=1"` | set newPasswordRequired for user |
 | `/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/foo.app/Contents/Info.plist` | get BundleIdentifier |
-| `osascript -e 'id of app "foo" ` | get BundleIdentifier |
+| `osascript -e 'id of app "foo" ` | rename volume in efi-menu |
+| `sudo bless --folder "volume_path" -label "volume_label"` | get BundleIdentifier |
+
 
 ##### create new admin without admin privilegs
 Hold `⌘`+`S` on startup, then
