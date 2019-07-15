@@ -78,6 +78,35 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `munki://updates` | updates |
 | `munki://detail-Spotify` | direct to app (detailname) |
 
+#### for powershell 
+| Command | Description |
+| --- | --- |
+| `Install-Module -Name AzureAD ` | Install module AzureAD |
+| `Connect-AzureAD  ` | Connect to AzureAD |
+| `Get-AzureADUser  ` | Show all AzureAD users |
+| `Get-AzureADUser \| Sort-Object UserPrincipalName \| Select-Object UserPrincipalName ` | Connect to AzureAD and sort |
+| `Set-CalendarProcessing -Identity “Spring” -BookingWindowInDays 1080` | set caleander limit to 1080 days |
+| `Install-Module MSOnline` | Install module Exchange |
+| `Connect-MsolService ` | Connect to Exchange |
+| `Get-AzureADUser` | Show all AzureAD users |
+| `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp` | Last Password Change time for All Users |
+| `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp \| Export-CSV LastPasswordChange.csv -NoTypeInformation` | + export |
+| `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed \| Export-CSV Users.csv -NoTypeInformation
+` | + export users |
+
+
+
+
+
+#### for aruba switch 
+| Command | Description |
+| --- | --- |
+| `menu` | menu |
+| `sh run` | show config |
+| `wr mem` | write memory |
+| `conf t` | config |
+| `sh int br` | overview ports |
+
 #### for unix 
 | Command | Description |
 | --- | --- |
@@ -86,6 +115,9 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `/etc/gettytab` | banner |
 | `smbstatus` | current connections to smb server |
 | `/var/log/samba/log.<clientname>` | logs for clients |
+| `tail -f /var/log/apache2/access.log` | access log› |
+
+
 
 #### for docker 
 | Command | Description |
