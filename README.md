@@ -78,6 +78,12 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `munki://updates` | updates |
 | `munki://detail-Spotify` | direct to app (detailname) |
 
+#### for Windows OS 
+| Command | Description |
+| --- | --- |
+| `systemreset` | System reset via cmd |
+| `systemreset -cleanpc` | FreshStart via cmd|
+
 #### for powershell 
 | Command | Description |
 | --- | --- |
