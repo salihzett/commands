@@ -97,8 +97,11 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `Get-AzureADUser` | Show all AzureAD users |
 | `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp` | Last Password Change time for All Users |
 | `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp \| Export-CSV LastPasswordChange.csv -NoTypeInformation` | + export |
-| `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed \| Export-CSV Users.csv -NoTypeInformation
-` | + export users |
+| `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed \| Export-CSV Users.csv -NoTypeInformation` | + export users |
+| `New-DistributionGroup -Name "Conference Rooms" -OrganizationalUnit "contoso.onmicrosoft.com" -RoomList` | Create a room list |
+| `Add-DistributionGroupMember -Identity "Conference Rooms" -Member confroom3223@contoso.com` | add confroom3223 to "Conference Rooms" |
+| `Remove-DistributionGroup -Identity <name of group>` | Delete a room list |
+| `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed \| Export-CSV Users.csv -NoTypeInformation` | + export users |
 
 
 
