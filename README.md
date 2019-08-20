@@ -94,7 +94,6 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `Set-CalendarProcessing -Identity “Spring” -BookingWindowInDays 1080` | set caleander limit to 1080 days |
 | `Install-Module MSOnline` | Install module Exchange |
 | `Connect-MsolService ` | Connect to Exchange |
-| `Get-AzureADUser` | Show all AzureAD users |
 | `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp` | Last Password Change time for All Users |
 | `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp \| Export-CSV LastPasswordChange.csv -NoTypeInformation` | + export |
 | `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed \| Export-CSV Users.csv -NoTypeInformation` | + export users |
