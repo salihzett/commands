@@ -97,8 +97,7 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp` | Last Password Change time for All Users |
 | `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed` | Display users and isLicensed false true |
 | `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed \| Export-CSV Users.csv -NoTypeInformation` | + export users |
-| `Get-Mailbox \| Get-MailboxPermission \| where {$_.user.tostring() -ne "NT AUTHORITY\SELF" -and $_.IsInherited -eq $false}
-` | Show all shared mailboxes and their members |
+| `Get-Mailbox \| Get-MailboxPermission \| where {$_.user.tostring() -ne "NT AUTHORITY\SELF" -and $_.IsInherited -eq $false}` | Show all shared mailboxes and their members |
 | `Get-Mailbox * \| Sort-Object DisplayName \| Select-Object Name, whenMailboxCreated` | Mailbox created date |
 | `Set-CalendarProcessing -Identity “Spring” -BookingWindowInDays 1080` | set caleander limit to 1080 days |
 | `New-DistributionGroup -Name "Conference Rooms" -OrganizationalUnit "contoso.onmicrosoft.com" -RoomList` | Create a room list |
@@ -107,10 +106,6 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `Get-CASMailbox -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| Select-Object @{n = "Identity"; e = {$_.primarysmtpaddress}} \| Set-CASMailbox -PopEnabled $false` | Disable POP |
 | `Get-CASMailboxPlan -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| set-CASMailboxPlan -PopEnabled $false` | Disable POP for future members |
 | `Get-CASMailbox -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| Export-CSV EnabledMailServices.csv -NoTypeInformation` | List overview |
-
-
-
-
 
 
 #### for aruba switch 
