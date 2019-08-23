@@ -87,20 +87,27 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 #### for powershell 
 | Command | Description |
 | --- | --- |
-| `Install-Module -Name AzureAD ` | Install module AzureAD |
-| `Connect-AzureAD  ` | Connect to AzureAD |
-| `Get-AzureADUser  ` | Show all AzureAD users |
-| `Get-AzureADUser \| Sort-Object UserPrincipalName \| Select-Object UserPrincipalName ` | Connect to AzureAD and sort |
-| `Set-CalendarProcessing -Identity “Spring” -BookingWindowInDays 1080` | set caleander limit to 1080 days |
+| `Install-Module -Name AzureAD` | Install module AzureAD |
+| `Connect-AzureAD` | Connect to AzureAD |
+| `Get-AzureADUser` | Show all AzureAD users |
+| `Get-AzureADUser \| Sort-Object DisplayName \| Select-Object DisplayName, UserPrincipalName` | Connect to AzureAD and Sort users |
+| `Get-AzureADGroup \| Sort-Object DisplayName \| Select-Object DisplayName, Description` | All groups |
 | `Install-Module MSOnline` | Install module Exchange |
-| `Connect-MsolService ` | Connect to Exchange |
+| `Connect-MsolService` | Connect to Exchange |
 | `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp` | Last Password Change time for All Users |
-| `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp \| Export-CSV LastPasswordChange.csv -NoTypeInformation` | + export |
+| `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed` | Display users and isLicensed false true |
 | `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed \| Export-CSV Users.csv -NoTypeInformation` | + export users |
+| `Get-Mailbox \| Get-MailboxPermission \| where {$_.user.tostring() -ne "NT AUTHORITY\SELF" -and $_.IsInherited -eq $false}
+` | Show all shared mailboxes and their members |
+| `Get-Mailbox * \| Sort-Object DisplayName \| Select-Object Name, whenMailboxCreated` | Mailbox created date |
+| `Set-CalendarProcessing -Identity “Spring” -BookingWindowInDays 1080` | set caleander limit to 1080 days |
 | `New-DistributionGroup -Name "Conference Rooms" -OrganizationalUnit "contoso.onmicrosoft.com" -RoomList` | Create a room list |
 | `Add-DistributionGroupMember -Identity "Conference Rooms" -Member confroom3223@contoso.com` | add confroom3223 to "Conference Rooms" |
 | `Remove-DistributionGroup -Identity <name of group>` | Delete a room list |
-| `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed \| Export-CSV Users.csv -NoTypeInformation` | + export users |
+| `Get-CASMailbox -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| Select-Object @{n = "Identity"; e = {$_.primarysmtpaddress}} \| Set-CASMailbox -PopEnabled $false` | Disable POP |
+| `Get-CASMailboxPlan -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| set-CASMailboxPlan -PopEnabled $false` | Disable POP for future members |
+| `Get-CASMailbox -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| Export-CSV EnabledMailServices.csv -NoTypeInformation` | List overview |
+
 
 
 
