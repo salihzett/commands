@@ -5,6 +5,9 @@
 | --- | --- |
 | `/usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on / off` | enable / disable firewall |
 | `/usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on / off` | enable / disable stealthmode |
+| `defaults write /Library/Preferences/com.apple.alf globalstate -int 0` | To turn firewall off |
+| `defaults write /Library/Preferences/com.apple.alf globalstate -int -1` | To turn firewall on for specific applications/services |
+| `defaults write /Library/Preferences/com.apple.alf globalstate -int -2` | turn firewall on for network services e.g. DHCP and ipsec, block all the rest |
 | `systemsetup -setremotelogin on / off` | enable / disable ssh |
 | `spctl --master-enable / disable` | enable / disable gatekeeper |
 | `dscl . passwd /Users/admin` | change user (admin) password |
@@ -57,6 +60,11 @@ rm ~/id_rsa.pub
 chmod 600 ~/.ssh/authorized_keys
 ```
 
+##### create pkg with pkgbuild
+```
+pkgbuild --root ROOT/ --identifier de.salihzett.test --version 1.0 --nopayload --scripts scripts/ "salihzett.pkg"
+```
+
 ##### install pkg on remote host
 ```
 scp /PATHTO/<file>.pkg <user>@<remote_host>:/tmp/
@@ -74,6 +82,7 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `sudo managedsoftwareupdate` | search software and updates via munki |
 | `sudo managedsoftwareupdate --installonly` | install available software and updates via munki |
 | `sudo managedsoftwareupdate -vvv` | get more verbose output |
+| `zip -r site_default.zip resources/ templates/` | zip for munki design |
 | `munki://category-all` | overview |
 | `munki://updates` | updates |
 | `munki://detail-Spotify` | direct to app (detailname) |
@@ -106,6 +115,10 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `Get-CASMailbox -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| Select-Object @{n = "Identity"; e = {$_.primarysmtpaddress}} \| Set-CASMailbox -PopEnabled $false` | Disable POP |
 | `Get-CASMailboxPlan -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| set-CASMailboxPlan -PopEnabled $false` | Disable POP for future members |
 | `Get-CASMailbox -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| Export-CSV EnabledMailServices.csv -NoTypeInformation` | List overview |
+| `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp` | Last Password Change time for All Users |
+
+
+
 
 
 #### for aruba switch 
