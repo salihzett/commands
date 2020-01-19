@@ -96,6 +96,8 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 #### for powershell 
 | Command | Description |
 | --- | --- |
+| `Set-ExecutionPolicy Unrestricted` | run all scripts without restriction |
+| `Set-ExecutionPolicy  Allsigned` | ust run scripts which are digital signed |
 | `Install-Module -Name AzureAD` | Install module AzureAD |
 | `Connect-AzureAD` | Connect to AzureAD |
 | `Get-AzureADUser` | Show all AzureAD users |
@@ -116,9 +118,6 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `Get-CASMailboxPlan -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| set-CASMailboxPlan -PopEnabled $false` | Disable POP for future members |
 | `Get-CASMailbox -Filter {ImapEnabled -eq "true" -or PopEnabled -eq "true" } \| Export-CSV EnabledMailServices.csv -NoTypeInformation` | List overview |
 | `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp` | Last Password Change time for All Users |
-
-
-
 
 
 #### for aruba switch 
