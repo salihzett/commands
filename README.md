@@ -124,10 +124,14 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | Command | Description |
 | --- | --- |
 | `menu` | menu |
-| `sh run` | show config |
 | `wr mem` | write memory |
 | `conf t` | config |
+| `sh run` | show config |
 | `sh int br` | overview ports |
+| `sh vpn` | show vpn|
+| `sh ip` | show IP routing |
+| `sh arp` | show arp table |
+
 
 #### for unix 
 | Command | Description |
