@@ -110,6 +110,8 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `Get-MsolUser -All \| select DisplayName, UserPrincipalName, isLicensed \| Export-CSV Users.csv -NoTypeInformation` | + export users |
 | `Get-Mailbox \| Get-MailboxPermission \| where {$_.user.tostring() -ne "NT AUTHORITY\SELF" -and $_.IsInherited -eq $false}` | Show all shared mailboxes and their members |
 | `Get-Mailbox * \| Sort-Object DisplayName \| Select-Object Name, whenMailboxCreated` | Mailbox created date |
+| `Get-Mailbox \| Set-MailboxRegionalConfiguration -Language 2057 -TimeZone "W. Europe Standard Time” -DateFormat “dd/MM/yyyy" -TimeFormat “HH:mm”` | [more information here](https://docs.microsoft.com/en-us/powershell/module/exchange/client-access/set-mailboxregionalconfiguration?view=exchange-ps) and for the codes [here](https://www.msdigest.net/2017/03/how-to-change-the-language-and-timezone-settings/)| 
+
 | `Set-CalendarProcessing -Identity “Spring” -BookingWindowInDays 1080` | set caleander limit to 1080 days |
 | `New-DistributionGroup -Name "Conference Rooms" -OrganizationalUnit "contoso.onmicrosoft.com" -RoomList` | Create a room list |
 | `Add-DistributionGroupMember -Identity "Conference Rooms" -Member confroom3223@contoso.com` | add confroom3223 to "Conference Rooms" |
