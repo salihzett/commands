@@ -87,6 +87,22 @@ sudo installer -pkg /tmp/<file>.pkg -target /
 | `munki://updates` | updates |
 | `munki://detail-Spotify` | direct to app (detailname) |
 
+
+##### sql munkireport
+```
+mysql -u root -h 127.0.0.1 -p
+mysqldump -uroot -PASSWORD --all-databases > dump.sql # backup
+show databases;
+use munkireport;
+show tables;
+```
+| Command | Description |
+| --- | --- |
+| `select machine.computer_name, z_sn_email.emailaddress, machine.serial_number, machine.machine_name, appusage.app_name from machine LEFT JOIN appusage ON machine.serial_number = appusage.serial_number LEFT JOIN z_sn_email ON z_sn_email.serial_number = machine.serial_number WHERE app_name="MacKeeper Helper";` | SQL request for MacKeeper |
+| `select reportdata.long_username, machine.computer_name, machine.serial_number, bluetooth.battery_percent, bluetooth.device_type from machine LEFT JOIN bluetooth ON bluetooth.serial_number = machine.serial_number LEFT JOIN reportdata ON reportdata.serial_number = machine.serial_number WHERE bluetooth.battery_percent IS NOT NULL AND (device_type="magic_keyboard" OR device_type="magic_keyboard_with_numeric_keypad" OR device_type="magic_mouse_2" OR device_type="apple_wireless_trackpad") ORDER BY battery_percent desc;` | SQL request for Battery |
+
+
+
 #### for Windows OS 
 | Command | Description |
 | --- | --- |
