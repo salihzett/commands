@@ -148,6 +148,9 @@ show tables;
 | `sh vpn` | show vpn|
 | `sh ip` | show IP routing |
 | `sh arp` | show arp table |
+| `config` | config menu |
+| `commit apply` | commit |
+| `allow-rest-api` | enable API |
 
 
 #### for unix 
