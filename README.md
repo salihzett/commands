@@ -147,6 +147,11 @@ Install-Module -Name PSWSMan
 sudo pwsh -Command 'Install-WSMan'
 ```
 more information [here](https://www.matt-thornton.net/general/exchange-online-powershell-on-macos)
+and [here[(https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.2)
+```
+Connect-ExchangeOnline 
+```
+
 
 #### for aruba switch 
 | Command | Description |
