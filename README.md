@@ -137,6 +137,17 @@ show tables;
 | `Get-MsolUser -All \| select DisplayName, LastPasswordChangeTimeStamp` | Last Password Change time for All Users |
 
 
+#### setup powershell for macOS 
+```
+brew install powershell
+brew install openssl
+pwsh
+Install-Module -Name PowerShellGet
+Install-Module -Name PSWSMan
+sudo pwsh -Command 'Install-WSMan'
+```
+more information [here](https://www.matt-thornton.net/general/exchange-online-powershell-on-macos)
+
 #### for aruba switch 
 | Command | Description |
 | --- | --- |
