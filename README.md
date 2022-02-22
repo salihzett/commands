@@ -38,9 +38,11 @@
 | `sudo mdutil -E /` |  reindex volume on the mac |
 | `dns-sd -B _ssh._tcp .` | check macs in the network |
 | `pwpolicy -a admin -u user -setpolicy "newPasswordRequired=1"` | set newPasswordRequired for user |
-| `/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/foo.app/Contents/Info.plist` | get BundleIdentifier |
 | `osascript -e 'id of app "foo" ` | rename volume in efi-menu |
 | `sudo bless --folder "volume_path" -label "volume_label"` | get BundleIdentifier |
+| `/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/foo.app/Contents/Info.plist` | get BundleIdentifier |
+| `osascript -e 'id of app "Microsoft Excel"'` | get BundleIdentifier |
+| `codesign -dr /Applications/Slack.app "` | get BundleIdentifier |
 
 
 ##### create new admin without admin privilegs
